@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SalesForce">
+	<listeners>
+		<listener class-name="testcase.retryListener"></listener>
+	</listeners>
+	<test thread-count="5" name="Account" verbose="5">
+		<parameter name="url" value="https://login.salesforce.com/"></parameter>
+		<parameter name="username"
+			value="karthikeyan@kkrinfotech.com"></parameter>
+		<parameter name="password" value="12345@Qwerty"></parameter>
+		<classes>
+			<class name="testcase.CreateAccounts" />
+			<class name="testcase.CreateIndividuals" />
+			<class name="testcase.CreateNewDashboard" />
+			<class name="testcase.CreateNewOpportunity" />
+			<class name="testcase.CreateOpportunityWithoutMandatoryFields" />
+		</classes>
+	</test> <!-- Account -->
+</suite> <!-- SalesForce -->
